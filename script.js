@@ -227,3 +227,4 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(revealServices, 500); // Delay to sync with scroll
   });
 });
+
