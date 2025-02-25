@@ -770,7 +770,6 @@ header {
 /*=================Contact section styles======================*/
 
 
-
 .CONTACT {
     background-color: #000000;
     position: relative;
@@ -781,6 +780,7 @@ header {
     justify-content: center;
     text-align: center;
 }
+
 
 .contact-section {
     height: auto;
@@ -896,9 +896,9 @@ header {
 }
 
 .glow-text {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
-    /* text-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 
-                 0 0 10px rgba(255, 255, 255, 0.4), 
-                 0 0 15px rgba(255, 255, 255, 0.2); */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                 0 0 20px rgba(255, 255, 255, 0.6), 
+                 0 0 30px rgba(255, 255, 255, 0.4);
 }
