@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
 
 .RvM-profile {
     display: grid;
@@ -140,17 +142,36 @@ header {
     position: relative;
 }
 
-.navlist a{
+.navlist a {
     font-family: 'Marcellus', serif;
     font-size: 17px;
     color: var(--nav-color);
     font-weight: 600;
     padding: 10px 27px;
-	transition: 200ms;
-
+    transition: 200ms;
+    position: relative; /* Needed for the after pseudo-element */
 }
+
+/* Apply the orange underline when hovering */
 .navlist a:hover {
-    color:var(--dtext-color);
+    color: var(--dtext-color);
+}
+
+/* The underline effect (using ::after) */
+.navlist a::after {
+    content: ''; /* Create an empty content for the underline */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0; /* Initial width is 0 */
+    height: 3px; /* Increased thickness */
+    background-color: #FF5722; /* Orange color */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* When hovering, the width expands to full */
+.navlist a:hover::after {
+    width: 100%;
 }
 
 .HOME{
@@ -353,6 +374,77 @@ header {
 
 
 
+/* Availability Wrapper */
+.availability {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Status Badge (Aligns dot & text) */
+.status-badge {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Dot Container (Ensures Proper Positioning) */
+.dot-container {
+    position: relative; /* Make sure it's relative so the absolute dot is inside it */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 12px; /* Ensure correct width */
+    height: 12px;
+    margin-right: 8px; /* Space between dot & text */
+}
+
+/* Green Dot (Animated Ping Effect) */
+.animate-ping {
+    position: absolute;
+    animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+    background-color: rgb(52, 211, 153); /* Ensure it has a visible color */
+    width: 12px;
+    height: 12px;
+    border-radius: 9999px;
+}
+
+/* Main Dot (Always Visible) */
+.relative {
+    display: block; /* Ensure it’s visible */
+    background-color: rgb(52, 211, 153);
+    width: 12px;
+    height: 12px;
+    border-radius: 9999px;
+}
+
+/* Ping Animation (Fix Disappearance) */
+@keyframes ping {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .availability {
+        padding: 10px;
+    }
+}
 
 
 /*==========   ABOUT  =========*/
@@ -389,7 +481,7 @@ header {
 .content h1{
     color: #ffffff;
     font-size: 50px;
-    margin-bottom: 1px;
+    margin-bottom: 30px;
     font-weight: 800;
     transition: 1s;
 }
@@ -406,6 +498,7 @@ header {
     transition: 1s;
     margin-bottom: 40px; /* Adds space  after the paragraph */
 }
+
 
 .content img{
     max-width: 100%;
@@ -446,7 +539,7 @@ header {
 .WORKS{
     height: auto;
     position: relative;
-    padding: 100px 0 0 0%;
+    padding: 80px 0 0 0%;
     overflow: hidden;
     background: linear-gradient(to top, rgb(61, 60, 60),rgb(0, 0, 0), rgba(0, 0, 0, 0.225));
 
@@ -463,6 +556,13 @@ header {
     font-weight: 400;
     font-size: 35px;
     color: var(--nav-color);
+}
+
+.text-grap .glow-text {
+    font-family: 'Roboto', sans-serif; /* Use Roboto */
+    font-weight: 200; /* Bold */
+    font-size: 1.5rem; /* Adjust size */
+    text-shadow: none; /* Remove glow */
 }
 
 .wedding {
@@ -895,10 +995,3 @@ header {
     transform: translateX(0);
 }
 
-.glow-text {
-    font-size: 20px;
-    font-weight: bold;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
-                 0 0 20px rgba(255, 255, 255, 0.6), 
-                 0 0 30px rgba(255, 255, 255, 0.4);
-}
