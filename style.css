@@ -596,14 +596,14 @@ header {
 .content2 { background-image: url(wedding-setup/gh2.jpg); }
 .content3 { background-image: url(wedding-setup/gh3.jpg); }
 .content4 { background-image: url(wedding-setup/gh4.jpg); }
-.content5 { background-image: url(wedding-setup/gh5.png); }
+.content5 { background-image: url(wedding-setup/gh5.jpg); }
 .content6 { background-image: url(wedding-setup/gl3.jpg); }
-.content7 { background-image: url(wedding-setup/gl4.PNG); }
-.content8 { background-image: url(wedding-setup/gl5.JPG); }
-.content9 { background-image: url(wedding-setup/gl6.png); }
-.content10 { background-image: url(wedding-setup/gl7.png); }
-.content11 { background-image: url(wedding-setup/sadasd.png); }
-.content12 { background-image: url(wedding-setup/sdasd.jpg); }
+.content7 { background-image: url(wedding-setup/gl4.jpg); }
+.content8 { background-image: url(wedding-setup/gl5.jpg); }
+.content9 { background-image: url(wedding-setup/gl6.jpg); }
+.content10 { background-image: url(wedding-setup/gl7.jpg); }
+.content11 { background-image: url(wedding-setup/sadasd.jpg); }
+.content12 { background-image: url(wedding-setup/sadasd.jpg); }
 
 /* Responsive Grid */
 @media (max-width: 900px) {
