@@ -620,6 +620,12 @@ header {
     }
 }
 
+.wedding .REV:hover {
+    transform: scale(1.1); /* Slightly bigger zoom */
+    transition: transform 0.7s ease-in-out; /* Smoother transition */
+}
+
+
 
 .postnub {
     width: 95%;
