@@ -246,3 +246,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
   videos.forEach((video) => observer.observe(video));
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  let videos = document.querySelectorAll(".video-works video");
+
+  videos.forEach((video) => {
+      video.load(); // Ensures video is loaded
+      video.play().catch(() => console.log("Autoplay prevented by browser"));
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.querySelector(".back-video");
+  video.play().catch(() => console.log("Autoplay prevented by browser"));
+});
