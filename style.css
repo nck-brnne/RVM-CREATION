@@ -902,7 +902,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
     margin-bottom: 10px;
 }
 .contact-info ul li i {
