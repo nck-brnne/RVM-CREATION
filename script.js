@@ -228,3 +228,21 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  let videos = document.querySelectorAll(".video-works video");
+
+  let observer = new IntersectionObserver(
+      (entries) => {
+          entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                  entry.target.play();
+              } else {
+                  entry.target.pause();
+              }
+          });
+      },
+      { threshold: 0.5 } // Play when 50% of video is visible
+  );
+
+  videos.forEach((video) => observer.observe(video));
+});

@@ -72,7 +72,7 @@
 :root{
     --main-color: rgb(161, 161, 161); 
     --text-color: #bdbdb8; 
-    --hover-color:#00FF9C;
+    --hover-color:#00ff9c;
     --dtext-color:#fecd00;
     --big-font:1.5rem;
 }
@@ -164,7 +164,7 @@ header {
     left: 0;
     width: 0; /* Initial width is 0 */
     height: 3px; /* Increased thickness */
-    background-color: #FF5722; /* Orange color */
+    background-color: #00ff9c; /* Orange color */
     transition: all 0.3s ease; /* Smooth transition */
 }
 
@@ -879,7 +879,6 @@ header {
     background-color: #000;
     color: #fff;
     text-align: center;
-    padding: 50px 20px;
     font-family: Arial, sans-serif;
 }
 .contact-container h2 {
@@ -950,12 +949,12 @@ header {
 
   .wave-container {
     position: absolute;
-    bottom: 10px; /* Moves wave slightly higher */
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: 150px; /* Keeps wave visible without scrolling */
+    height: 100%; /* Fit inside contact section */
     overflow: hidden;
-    z-index: -1; /* Ensures waves stay behind text */
+    z-index: -1;
 }
 
      
@@ -964,7 +963,7 @@ header {
 .wave {
     position: absolute;
     bottom: 0;
-    height: 120px;
+    height: 100px;
     width: 100%;
     background: url('image/wave.png') repeat-x;
     background-size: 250rem 30rem;
